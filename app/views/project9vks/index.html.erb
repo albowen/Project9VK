@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Project9vks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>About</th>
+      <th>Date</th>
+      <th>Attendance</th>
+      <th>Done</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project9vks.each do |project9vk| %>
+      <tr>
+        <td><%= project9vk.title %></td>
+        <td><%= project9vk.about %></td>
+        <td><%= project9vk.date %></td>
+        <td><%= project9vk.attendance %></td>
+        <td><%= project9vk.done %></td>
+        <td><%= link_to 'Show', project9vk %></td>
+        <td><%= link_to 'Edit', edit_project9vk_path(project9vk) %></td>
+        <td><%= link_to 'Destroy', project9vk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project9vk', new_project9vk_path %>

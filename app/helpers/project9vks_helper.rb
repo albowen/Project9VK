@@ -1,0 +1,2 @@
+module Project9vksHelper
+end

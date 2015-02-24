@@ -1,0 +1,37 @@
+<%= form_for(@project9vk) do |f| %>
+  <% if @project9vk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project9vk.errors.count, "error") %> prohibited this project9vk from being saved:</h2>
+
+      <ul>
+      <% @project9vk.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :about %><br>
+    <%= f.text_field :about %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.date_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :attendance %><br>
+    <%= f.number_field :attendance %>
+  </div>
+  <div class="field">
+    <%= f.label :done %><br>
+    <%= f.check_box :done %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
